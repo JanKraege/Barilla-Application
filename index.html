@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jan Kraege | Barilla Future Leader in Sales & Marketing</title>
+  <title>Jan Kraege | Barilla Future Leader Sales & Marketing</title>
 
   <style>
     html { scroll-behavior: smooth; }
 
     :root {
-      --blue: #004b8d;
-      --blue-dark: #002f5f;
-      --lime: #d71920;
-      --black: #111111;
+      --blue: #003b7a;
+      --blue-dark: #002957;
+      --red: #c8102e;
+      --cream: #f8f3e8;
+      --cream-dark: #efe4d0;
+      --gold: #d8b25c;
+      --pasta: #f1d28a;
       --white: #ffffff;
-      --light: #f6f7f9;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #d9dde5;
-      --shadow: 0 14px 34px rgba(0, 31, 95, 0.12);
+      --black: #1b1b1b;
+      --text: #303030;
+      --muted: #6f6f6f;
+      --border: #e3d8c7;
+      --shadow: 0 16px 34px rgba(0, 41, 87, 0.12);
     }
 
     * { box-sizing: border-box; }
@@ -26,12 +29,11 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--light);
+      background: var(--cream);
       color: var(--text);
       line-height: 1.6;
     }
 
-    /* Language toggle: German default, button switches full page */
     .lang-en, .lang-de { display: none !important; }
     body.show-de .lang-de { display: initial !important; }
     body.show-en .lang-en { display: initial !important; }
@@ -76,51 +78,62 @@
       align-items: center;
       justify-content: space-between;
       gap: 28px;
-      padding: 14px 8%;
-      background: rgba(255,255,255,0.98);
-      box-shadow: 0 3px 18px rgba(0,0,0,0.08);
-      border-bottom: 1px solid var(--border);
+      padding: 16px 8%;
+      background: var(--blue);
+      box-shadow: 0 3px 18px rgba(0,0,0,0.12);
+      border-bottom: 5px solid var(--red);
     }
 
     .logo-wrap {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       white-space: nowrap;
     }
 
     .logo-mark {
-      width: 50px;
-      height: 50px;
-      background: var(--blue);
+      width: 112px;
+      height: 48px;
+      background: var(--white);
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--blue);
+      font-size: 28px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -1.5px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
       position: relative;
-      box-shadow: 0 4px 12px rgba(0, 51, 160, 0.18);
     }
 
-    .logo-mark::before {
-      content: "Barilla";
+    .logo-mark::after {
+      content: "Since 1877";
       position: absolute;
-      top: -17px;
-      left: 0;
-      color: var(--black);
-      font-weight: 900;
-      font-size: 13px;
-      letter-spacing: -0.5px;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8px;
+      font-style: normal;
+      color: rgba(255,255,255,0.92);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
     }
 
     .logo-text {
       font-weight: 800;
-      color: var(--black);
+      color: var(--white);
       font-size: 15px;
       line-height: 1.2;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
     }
 
     .logo-small {
       display: block;
       font-size: 10px;
-      color: var(--muted);
+      color: rgba(255,255,255,0.75);
       font-weight: 700;
       letter-spacing: 0.5px;
       margin-top: 4px;
@@ -132,59 +145,60 @@
       align-items: center;
       justify-content: flex-end;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: 17px;
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
     nav a {
-      color: var(--black);
+      color: rgba(255,255,255,0.92);
       text-decoration: none;
       font-weight: 700;
       font-size: 14px;
     }
 
-    nav a:hover { color: var(--blue); }
+    nav a:hover { color: var(--pasta); }
 
     .language-toggle {
-      background: var(--white);
-      color: var(--blue);
-      border: 2px solid var(--blue);
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.8);
       padding: 9px 15px;
-      border-radius: 0;
+      border-radius: 999px;
       font-weight: 800;
       font-size: 14px;
       cursor: pointer;
     }
 
     .language-toggle:hover {
-      background: var(--blue);
-      color: var(--white);
+      background: var(--white);
+      color: var(--blue);
     }
 
     .nav-button {
-      background: var(--lime);
-      color: var(--black) !important;
+      background: var(--red);
+      color: var(--white) !important;
       padding: 10px 18px;
-      border-radius: 0;
-      border: 1px solid #9fbe20;
+      border-radius: 999px;
+      border: 1px solid var(--red);
       font-weight: 800;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
     }
 
     header {
-      min-height: 650px;
+      min-height: 680px;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      color: var(--white);
+      color: var(--blue);
       text-align: center;
       background:
-        linear-gradient(rgba(17,17,17,0.72), rgba(17,17,17,0.50)),
-        linear-gradient(120deg, rgba(0,51,160,0.88) 0%, rgba(0,31,95,0.78) 44%, rgba(17,17,17,0.66) 100%),
-        linear-gradient(135deg, #1f2937 0%, #111111 100%);
+        radial-gradient(circle at 12% 20%, rgba(216,178,92,0.28), transparent 28%),
+        radial-gradient(circle at 84% 74%, rgba(200,16,46,0.12), transparent 25%),
+        linear-gradient(135deg, #fbf6ec 0%, #f4e6cf 48%, #f8f3e8 100%);
     }
 
     header::before {
@@ -192,94 +206,117 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.11) 0 1px, transparent 1px 90px),
-        linear-gradient(0deg, rgba(255,255,255,0.10) 0 1px, transparent 1px 90px),
-        linear-gradient(28deg, transparent 0 30%, rgba(183,211,52,0.34) 30.2% 30.9%, transparent 31.1%),
-        linear-gradient(155deg, transparent 0 42%, rgba(255,255,255,0.16) 42.2% 42.7%, transparent 43%);
-      opacity: 0.82;
+        linear-gradient(90deg, rgba(0,59,122,0.06) 0 1px, transparent 1px 90px),
+        linear-gradient(0deg, rgba(0,59,122,0.04) 0 1px, transparent 1px 90px);
+      opacity: 0.8;
     }
 
     header::after {
       content: "";
       position: absolute;
-      left: -8%;
-      right: -8%;
-      bottom: -125px;
+      left: -10%;
+      right: -10%;
+      bottom: -120px;
       height: 260px;
       background:
-        linear-gradient(90deg, rgba(183,211,52,0.95) 0 18%, rgba(255,255,255,0.92) 18% 36%, rgba(0,51,160,0.92) 36% 54%, rgba(255,255,255,0.90) 54% 72%, rgba(183,211,52,0.92) 72% 100%);
+        linear-gradient(90deg, rgba(0,59,122,0.96) 0 34%, rgba(200,16,46,0.94) 34% 43%, rgba(216,178,92,0.90) 43% 56%, rgba(200,16,46,0.94) 56% 65%, rgba(0,59,122,0.96) 65% 100%);
       transform: skewY(-3deg);
-      opacity: 0.82;
+      opacity: 0.95;
     }
 
-    .machine-line {
+    .pasta-shape {
       position: absolute;
-      background: rgba(255,255,255,0.16);
-      height: 2px;
-      border-radius: 999px;
       z-index: 1;
+      border: 3px solid rgba(216,178,92,0.55);
+      border-radius: 999px;
+      opacity: 0.85;
     }
 
-    .machine-line.one { width: 360px; left: 7%; top: 28%; transform: rotate(-8deg); }
-    .machine-line.two { width: 420px; right: 8%; top: 40%; transform: rotate(9deg); }
-    .machine-line.three { width: 300px; left: 30%; bottom: 28%; transform: rotate(4deg); background: rgba(183,211,52,0.45); }
+    .pasta-shape.one {
+      width: 320px;
+      height: 120px;
+      left: 6%;
+      top: 24%;
+      transform: rotate(-18deg);
+    }
+
+    .pasta-shape.two {
+      width: 360px;
+      height: 125px;
+      right: 7%;
+      top: 42%;
+      transform: rotate(16deg);
+      border-color: rgba(0,59,122,0.25);
+    }
+
+    .pasta-shape.three {
+      width: 260px;
+      height: 90px;
+      left: 35%;
+      bottom: 22%;
+      transform: rotate(7deg);
+      border-color: rgba(200,16,46,0.22);
+    }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      max-width: 1080px;
+      max-width: 1100px;
       padding: 90px 10%;
     }
 
     .application-tag {
-      background: rgba(255,255,255,0.92);
-      color: var(--black);
-      padding: 11px 18px;
-      border-radius: 0;
+      background: var(--blue);
+      color: var(--white);
+      padding: 11px 20px;
+      border-radius: 999px;
       font-weight: 900;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.7px;
       text-transform: uppercase;
       font-size: 13px;
       margin-bottom: 24px;
-      border-left: 8px solid var(--lime);
       justify-content: center;
       align-items: center;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+      box-shadow: 0 10px 26px rgba(0,41,87,0.18);
+      border: 2px solid rgba(255,255,255,0.5);
     }
 
     header h1 {
       font-size: 62px;
       line-height: 1.05;
       margin: 0;
-      color: var(--white);
-      text-shadow: 0 4px 18px rgba(0,0,0,0.32);
+      color: var(--blue);
+      text-shadow: 0 3px 0 rgba(255,255,255,0.65);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
 
     header h2 {
-      font-size: 27px;
+      font-size: 26px;
       font-weight: 500;
       max-width: 960px;
       margin: 22px auto 0;
-      color: rgba(255,255,255,0.96);
+      color: #10213f;
     }
 
     .tagline {
       font-size: 18px;
-      max-width: 940px;
+      max-width: 960px;
       margin: 26px auto 0;
-      color: rgba(255,255,255,0.95);
+      color: #42526a;
     }
 
     .hero-pill {
       align-items: center;
       justify-content: center;
       margin-top: 38px;
-      background: var(--lime);
-      color: var(--black);
-      border-radius: 0;
-      padding: 14px 22px;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 14px 24px;
       font-weight: 900;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
     }
 
     section {
@@ -290,32 +327,33 @@
     }
 
     h3 {
-      font-size: 42px;
-      color: var(--black);
+      font-size: 43px;
+      color: var(--blue);
       text-align: center;
       margin: 0 0 18px;
-      letter-spacing: -0.4px;
-      font-weight: 500;
+      letter-spacing: -0.5px;
+      font-weight: 700;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .section-subtitle {
       text-align: center;
-      max-width: 850px;
+      max-width: 880px;
       margin: 0 auto 40px;
       color: var(--muted);
       font-size: 18px;
     }
 
     .accent-line {
-      width: 88px;
+      width: 92px;
       height: 5px;
-      background: linear-gradient(90deg, var(--blue), var(--lime));
+      background: linear-gradient(90deg, var(--blue), var(--red), var(--gold));
       margin: 0 auto 34px;
-      border-radius: 0;
+      border-radius: 999px;
     }
 
     .intro-box, .intro {
-      max-width: 940px;
+      max-width: 960px;
       margin: 0 auto;
       text-align: center;
     }
@@ -330,11 +368,11 @@
     .intro-box strong, .intro strong { color: var(--blue); }
 
     .status-box {
-      max-width: 900px;
+      max-width: 920px;
       margin: 34px auto 0;
       background: var(--white);
-      border-left: 8px solid var(--lime);
-      border-radius: 0;
+      border-left: 8px solid var(--red);
+      border-radius: 18px;
       padding: 32px;
       box-shadow: var(--shadow);
       text-align: center;
@@ -344,6 +382,7 @@
       color: var(--blue);
       font-size: 24px;
       margin: 0 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .status-box p {
@@ -362,7 +401,7 @@
 
     .profile-box, .program-box {
       background: var(--white);
-      border-radius: 0;
+      border-radius: 20px;
       padding: 42px;
       min-height: 315px;
       display: flex;
@@ -372,14 +411,29 @@
       box-shadow: var(--shadow);
       border: 1px solid var(--border);
       border-top: 7px solid var(--blue);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-box::before,
+    .program-box::before,
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 105px;
+      height: 105px;
+      background: rgba(216,178,92,0.18);
+      border-radius: 50%;
     }
 
     .profile-box:nth-child(2),
     .profile-box:nth-child(3),
     .program-box:nth-child(2),
     .program-box:nth-child(3) {
-      border-top-color: var(--lime);
-      background: #fbfcf7;
+      border-top-color: var(--red);
+      background: #fffdf8;
     }
 
     .profile-box h4, .program-box h4 {
@@ -387,18 +441,25 @@
       font-size: 27px;
       margin: 12px 0 14px;
       font-weight: 700;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .profile-box p, .program-box p {
       color: #374151;
       font-size: 17px;
       margin: 8px 0;
+      position: relative;
+      z-index: 2;
     }
 
-    .emoji { font-size: 38px; }
+    .emoji {
+      font-size: 38px;
+      position: relative;
+      z-index: 2;
+    }
 
     .timeline {
-      max-width: 930px;
+      max-width: 950px;
       margin: 0 auto;
       padding-left: 35px;
       border-left: 5px solid var(--blue);
@@ -409,45 +470,57 @@
       font-size: 17px;
       background: var(--white);
       padding: 24px 26px;
-      border-radius: 0;
-      box-shadow: 0 8px 22px rgba(0,31,95,0.08);
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0,41,87,0.08);
       border: 1px solid var(--border);
     }
 
     .timeline strong { color: var(--blue); }
 
-    .technology-band {
+    .brand-band {
       max-width: none;
       background:
-        linear-gradient(rgba(0,31,95,0.88), rgba(0,31,95,0.86)),
-        linear-gradient(120deg, #0033a0 0%, #001f5f 48%, #111111 100%);
+        linear-gradient(rgba(0,59,122,0.90), rgba(0,41,87,0.92)),
+        radial-gradient(circle at 16% 20%, rgba(216,178,92,0.4), transparent 28%),
+        linear-gradient(120deg, #003b7a 0%, #002957 70%, #001a38 100%);
       color: var(--white);
-      padding: 82px 10%;
+      padding: 84px 10%;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    .technology-band::before {
+    .brand-band::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 80px),
-        linear-gradient(0deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 80px),
-        linear-gradient(28deg, transparent 0 38%, rgba(183,211,52,0.35) 38.2% 39%, transparent 39.2%);
+        linear-gradient(90deg, rgba(255,255,255,0.08) 0 1px, transparent 1px 90px),
+        linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 90px);
       opacity: 0.9;
     }
 
-    .technology-band h3, .technology-band p {
+    .brand-band::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 150px;
+      border: 4px solid rgba(216,178,92,0.36);
+      border-radius: 999px;
+      right: -80px;
+      bottom: 30px;
+      transform: rotate(-18deg);
+    }
+
+    .brand-band h3, .brand-band p {
       position: relative;
       z-index: 2;
     }
 
-    .technology-band h3 { color: var(--white); }
+    .brand-band h3 { color: var(--white); }
 
-    .technology-band p {
-      max-width: 940px;
+    .brand-band p {
+      max-width: 960px;
       margin: 12px auto;
       font-size: 19px;
       line-height: 1.85;
@@ -463,17 +536,19 @@
 
     .card {
       background: var(--white);
-      border-radius: 0;
+      border-radius: 20px;
       padding: 32px;
       box-shadow: var(--shadow);
       text-align: center;
       border: 1px solid var(--border);
-      border-top: 6px solid var(--lime);
+      border-top: 6px solid var(--gold);
+      position: relative;
+      overflow: hidden;
     }
 
     .card.accent {
       background:
-        linear-gradient(180deg, rgba(232,238,252,0.65), rgba(255,255,255,0.96)),
+        linear-gradient(180deg, rgba(248,243,232,0.65), rgba(255,255,255,0.98)),
         var(--white);
     }
 
@@ -481,45 +556,49 @@
       color: var(--blue);
       font-size: 22px;
       margin: 10px 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
     }
 
     .card p {
       color: #374151;
       font-size: 16.5px;
+      position: relative;
+      z-index: 2;
     }
 
     .highlight {
       max-width: none;
       background:
-        linear-gradient(rgba(17,17,17,0.88), rgba(17,17,17,0.90)),
-        linear-gradient(135deg, #0033a0 0%, #001f5f 45%, #111111 100%);
-      color: var(--white);
+        linear-gradient(rgba(248,243,232,0.92), rgba(248,243,232,0.96)),
+        radial-gradient(circle at 12% 22%, rgba(216,178,92,0.32), transparent 30%),
+        radial-gradient(circle at 86% 68%, rgba(200,16,46,0.12), transparent 25%);
+      color: var(--blue);
       padding: 90px 10%;
       text-align: center;
-      border-top: 8px solid var(--lime);
+      border-top: 8px solid var(--red);
       scroll-margin-top: 90px;
     }
 
     .highlight h3 {
-      color: var(--white);
+      color: var(--blue);
       font-size: 44px;
       margin-bottom: 18px;
     }
 
     .highlight p {
-      max-width: 900px;
+      max-width: 920px;
       margin: 14px auto;
       font-size: 19px;
       line-height: 1.85;
-      color: rgba(255,255,255,0.96);
+      color: #26364f;
     }
 
     footer {
       text-align: center;
-      padding: 50px 10%;
-      background: var(--black);
+      padding: 52px 10%;
+      background: var(--blue);
       color: var(--white);
-      border-top: 8px solid var(--lime);
+      border-top: 8px solid var(--red);
     }
 
     footer p {
@@ -539,7 +618,7 @@
       font-weight: 800;
     }
 
-    footer a { color: #d8f15d; }
+    footer a { color: var(--pasta); }
     footer a:hover { color: var(--white); }
 
     @media (max-width: 1050px) {
@@ -559,7 +638,7 @@
     @media (max-width: 800px) {
       nav { padding: 18px 6%; }
 
-      header { min-height: 620px; }
+      header { min-height: 650px; }
       header h1 { font-size: 38px; }
       header h2 { font-size: 21px; }
 
@@ -581,6 +660,12 @@
         flex-direction: column;
         gap: 10px;
       }
+
+      .logo-mark {
+        width: 104px;
+        height: 44px;
+        font-size: 25px;
+      }
     }
   </style>
 </head>
@@ -589,11 +674,11 @@
 
   <nav>
     <div class="logo-wrap">
-      <div class="logo-mark"></div>
+      <div class="logo-mark">Barilla</div>
       <div class="logo-text">
-        Barilla
+        Jan Kraege
         <span class="logo-small">
-          <span class="lang-de inline">Bewerbung Future Leader in Sales & Marketing</span>
+          <span class="lang-de inline">Bewerbung Future Leader Sales & Marketing</span>
           <span class="lang-en inline">Future Leader Sales & Marketing Application</span>
         </span>
       </div>
@@ -613,25 +698,25 @@
   </nav>
 
   <header>
-    <div class="machine-line one"></div>
-    <div class="machine-line two"></div>
-    <div class="machine-line three"></div>
+    <div class="pasta-shape one"></div>
+    <div class="pasta-shape two"></div>
+    <div class="pasta-shape three"></div>
 
     <div class="hero-content">
       <p class="application-tag lang-de">Barilla Bewerbung</p>
       <p class="application-tag lang-en">Barilla Application</p>
 
-      <h1 class="lang-de">Future Leader in Sales & Marketing</h1>
-      <h1 class="lang-en">Future Leader in Sales & Marketing</h1>
+      <h1 class="lang-de">Future Leader Program<br>Sales & Marketing</h1>
+      <h1 class="lang-en">Future Leader Program<br>Sales & Marketing</h1>
 
-      <h2 class="lang-de">Sales, Trade Marketing, Consumer Marketing und internationale Leadership-Entwicklung – für eine starke Zukunft im FMCG-Umfeld.</h2>
-      <h2 class="lang-en">Combining sales, trade marketing, consumer marketing and international leadership development to contribute to the future of Barilla in the FMCG environment.</h2>
+      <h2 class="lang-de">Consumer Insights, kommerzielles Denken und internationale Erfahrung – für nachhaltiges Wachstum in Trade Marketing, Consumer Marketing und Key Account Management.</h2>
+      <h2 class="lang-en">Combining consumer insights, commercial thinking and international experience to contribute to sustainable growth across Trade Marketing, Consumer Marketing and Key Account Management.</h2>
 
-      <p class="tagline lang-de">Business Management Graduate • Sales & Marketing • Consumer Insights • Trade Marketing • International Mindset</p>
-      <p class="tagline lang-en">Business Management Graduate • Sales & Marketing • Consumer Insights • Trade Marketing • International Mindset</p>
+      <p class="tagline lang-de">Business Management Graduate • Consumer Goods • Sales & Marketing • Market Analysis • International Mindset</p>
+      <p class="tagline lang-en">Business Management Graduate • Consumer Goods • Sales & Marketing • Market Analysis • International Mindset</p>
 
-      <div class="hero-pill lang-de">Trade Marketing • Consumer Marketing • Key Account Management • International Rotation</div>
-      <div class="hero-pill lang-en">Trade Marketing • Consumer Marketing • Key Account Management • International Rotation</div>
+      <div class="hero-pill lang-de">FMCG • Trade Marketing • Consumer Marketing • International Rotation</div>
+      <div class="hero-pill lang-en">FMCG • Trade Marketing • Consumer Marketing • International Rotation</div>
     </div>
   </header>
 
@@ -641,332 +726,4 @@
       <h3 class="lang-en">Dear Barilla Team,</h3>
       <div class="accent-line"></div>
 
-      <p class="lang-de">Mein Name ist Jan Kraege und ich habe meinen Master of Business Management an der University of Technology Sydney erfolgreich abgeschlossen.</p>
-      <p class="lang-en">My name is Jan Kraege and I have successfully completed my Master of Business Management at the University of Technology Sydney.</p>
-
-      <p class="lang-de">Was mit einem Auslandssemester in Australien begann, entwickelte sich zu mehreren Jahren Studium, Arbeit und persönlicher Weiterentwicklung in einem internationalen Umfeld. In dieser Zeit sammelte ich praktische Erfahrung in Sales, Marketing, Customer Insights, Marktanalysen, Kampagnenumsetzung und datenbasierter Entscheidungsunterstützung.</p>
-      <p class="lang-en">What started as an exchange semester in Australia developed into several years of studying, working and growing in an international environment. During this time, I gained practical experience in sales, marketing, customer insights, market analysis, campaign execution and data-based decision support.</p>
-
-      <p class="lang-de">Das Barilla Future Leader Program in Sales & Marketing hat mich sofort angesprochen, weil es genau die Themen verbindet, die mich besonders interessieren: <strong>Trade Marketing, Consumer Marketing, Key Account Management, Markt- und Kundenanalysen, Brand Performance, POS-Aktivierung, internationale Rotation und langfristige Leadership-Entwicklung</strong>.</p>
-      <p class="lang-en">The Barilla Future Leader Program in Sales & Marketing immediately stood out to me because it combines exactly the topics that excite me most: <strong>trade marketing, consumer marketing, key account management, market and customer analysis, brand performance, POS activation, international rotation and long-term leadership development</strong>.</p>
-    </div>
-
-    <div class="status-box">
-      <h4 class="lang-de">Abschlussstatus</h4>
-      <h4 class="lang-en">Graduation Status</h4>
-
-      <p class="lang-de">Ich habe meinen Master of Business Management im Juni 2026 erfolgreich abgeschlossen. Damit bin ich bereit, meine internationale Erfahrung und mein Sales-&-Marketing-Profil in einem langfristigen Graduate Program weiterzuentwickeln.</p>
-      <p class="lang-en">I successfully completed my Master of Business Management in June 2026. I am therefore ready to further develop my international experience and sales & marketing profile in a long-term graduate program.</p>
-    </div>
-  </section>
-
-  <section id="profile">
-    <h3>My Profile in 60 Seconds</h3>
-    <div class="accent-line"></div>
-
-    <p class="section-subtitle lang-de">Ein sales- und marketingorientierter Business Graduate mit internationaler Erfahrung, analytischer Denkweise und starkem Interesse an FMCG, Consumer Insights, Trade Marketing, Key Account Management und Markenwachstum.</p>
-    <p class="section-subtitle lang-en">A sales- and marketing-oriented business graduate with international experience, analytical thinking and a strong interest in FMCG, consumer insights, trade marketing, key account management and brand growth.</p>
-
-    <div class="profile-grid">
-      <div class="profile-box">
-        <div class="emoji">⚙️</div>
-        <h4 class="lang-de">Sales & Marketing Mindset</h4>
-        <h4 class="lang-en">Sales & Marketing Mindset</h4>
-        <p class="lang-de">Mich interessiert besonders, wie Sales, Trade Marketing und Consumer Marketing gemeinsam Wachstum, Markenstärke und erfolgreiche Kundenaktivierung schaffen.</p>
-        <p class="lang-en">I am strongly interested in how sales, trade marketing and consumer marketing together create growth, brand strength and successful customer activation.</p>
-        <p class="lang-de">Die Verbindung aus Strategie, Marktverständnis, Daten und operativer Umsetzung macht das Barilla Future Leader Program für mich besonders attraktiv.</p>
-        <p class="lang-en">The combination of strategy, market understanding, data and operational execution makes the Barilla Future Leader Program particularly attractive to me.</p>
-      </div>
-
-      <div class="profile-box">
-        <div class="emoji">📊</div>
-        <h4 class="lang-de">Markt- & Wettbewerbsanalyse</h4>
-        <h4 class="lang-en">Market & Competitor Analysis</h4>
-        <p class="lang-de">Ich arbeite gerne mit Marktdaten, Customer Behaviour und Wettbewerbsinformationen, um klare Empfehlungen abzuleiten.</p>
-        <p class="lang-en">I enjoy working with market data, customer behaviour and competitive information to derive clear recommendations.</p>
-        <p class="lang-de">Bei BRITA Australia analysierte ich Kundensegmente, Marktpotenzial und kommerzielle Machbarkeit für ein potenzielles Subscription Model.</p>
-        <p class="lang-en">At BRITA Australia, I analysed customer segments, market potential and commercial viability for a potential subscription model.</p>
-      </div>
-
-      <div class="profile-box">
-        <div class="emoji">💻</div>
-        <h4 class="lang-de">Consumer & Campaign Experience</h4>
-        <h4 class="lang-en">Consumer & Campaign Experience</h4>
-        <p class="lang-de">Ich habe praktische Erfahrung in Kampagnenmanagement, Performance Analysis, Content Ideation und digitalen Marketing-Tools gesammelt.</p>
-        <p class="lang-en">I gained practical experience in campaign management, performance analysis, content ideation and digital marketing tools.</p>
-        <p class="lang-de">Bei Tokyo Headspa unterstützte ich Social Media und EDM Campaign Management, Kampagnenoptimierung, Performance Analysis und AI-assisted Content Ideation.</p>
-        <p class="lang-en">At Tokyo Headspa, I supported social media and EDM campaign management, campaign optimisation, performance analysis and AI-assisted content ideation.</p>
-      </div>
-
-      <div class="profile-box">
-        <div class="emoji">🌍</div>
-        <h4 class="lang-de">Internationale Zusammenarbeit</h4>
-        <h4 class="lang-en">International Collaboration</h4>
-        <p class="lang-de">Studium und Arbeit in Australien haben mir geholfen, mich schnell in neue Umfelder einzufinden und kulturübergreifend zu kommunizieren.</p>
-        <p class="lang-en">Studying and working in Australia helped me adapt quickly to new environments and communicate across cultures.</p>
-        <p class="lang-de">Das passt sehr gut zu einem Graduate Program mit internationaler Rotation in Deutschland, Österreich, der Schweiz oder den nordischen Märkten.</p>
-        <p class="lang-en">This fits very well with a graduate program involving international rotations across Germany, Austria, Switzerland or the Nordic markets.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="journey">
-    <h3 class="lang-de">Mein internationaler Werdegang</h3>
-    <h3 class="lang-en">My International Journey</h3>
-    <div class="accent-line"></div>
-
-    <div class="timeline">
-      <div>
-        <strong class="lang-de">🇩🇪 Deutschland — Bachelorstudium in Business Administration (2020–2024)</strong>
-        <strong class="lang-en">🇩🇪 Germany — Bachelor Studies in Business Administration (2020–2024)</strong>
-        <br />
-        <span class="lang-de inline">An der Hochschule Fresenius in Wiesbaden legte ich die Grundlage für meinen heutigen Marketing- und Business-Fokus. Besonders die Schwerpunkte Marketing, International Management und Organisationspsychologie haben mein Interesse an Kundenbedürfnissen, Märkten und internationaler Zusammenarbeit geprägt.</span>
-        <span class="lang-en inline">At Hochschule Fresenius in Wiesbaden, I built the foundation for my current marketing and business focus. My studies in Marketing, International Management and Organisational Psychology shaped my interest in customer needs, markets and international collaboration.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇦🇺 Australien — Auslandssemester an der University of Technology Sydney (2022)</strong>
-        <strong class="lang-en">🇦🇺 Australia — Exchange Semester at the University of Technology Sydney (2022)</strong>
-        <br />
-        <span class="lang-de inline">Mein Auslandssemester in Sydney war mein erster intensiver internationaler Berührungspunkt. Es hat mir gezeigt, wie wertvoll unterschiedliche Perspektiven, interkulturelle Kommunikation und Anpassungsfähigkeit im Business-Kontext sind.</span>
-        <span class="lang-en inline">My exchange semester in Sydney was my first major international experience. It showed me the value of different perspectives, intercultural communication and adaptability in a business context.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇦🇺 Australien — BRITA Australia, Sales & Marketing Assistant (Nov 2022 – Apr 2023)</strong>
-        <strong class="lang-en">🇦🇺 Australia — BRITA Australia, Sales & Marketing Assistant (Nov 2022 – Apr 2023)</strong>
-        <br />
-        <span class="lang-de inline">Bei BRITA Australia arbeitete ich an Marktanalysen, Customer Behaviour Research, Commercial Feasibility Assessments, Brand Tracking Data Analysis und strategischen Empfehlungen. Besonders wertvoll war für mich die Schnittstelle zwischen Marketing, Sales und E-Commerce.</span>
-        <span class="lang-en inline">At BRITA Australia, I worked on market analysis, customer behaviour research, commercial feasibility assessments, brand tracking data analysis and strategic recommendations. The interface between Marketing, Sales and E-commerce was especially valuable for me.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇩🇪 Deutschland — Bachelorarbeit mit Australien-Bezug (2024)</strong>
-        <strong class="lang-en">🇩🇪 Germany — Bachelor Thesis With Australian Market Focus (2024)</strong>
-        <br />
-        <span class="lang-de inline">In meiner Bachelorarbeit beschäftigte ich mich mit den Auswirkungen von COVID-19 auf Supply Chains im australischen Markt anhand einer Case Study zu BRITA. Dadurch konnte ich internationale Marktbedingungen, Supply-Chain-Fragen und strategische Unternehmensentscheidungen miteinander verbinden.</span>
-        <span class="lang-en inline">In my bachelor thesis, I examined the impact of COVID-19 on supply chains in the Australian market through a case study on BRITA. This allowed me to connect international market conditions, supply chain topics and strategic business decisions.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇦🇺 Australien — Master of Business Management an der UTS Sydney (Feb 2025 – Jun 2026)</strong>
-        <strong class="lang-en">🇦🇺 Australia — Master of Business Management at UTS Sydney (Feb 2025 – Jun 2026)</strong>
-        <br />
-        <span class="lang-de inline">Für meinen Master kehrte ich nach Sydney zurück und vertiefte mein Profil in Global Strategic Management und Global Supply Chain Management. Das Studium hat mein strategisches Denken, meine analytische Arbeitsweise und mein Verständnis für internationale Geschäftsmodelle weiter gestärkt.</span>
-        <span class="lang-en inline">For my Master’s degree, I returned to Sydney and deepened my profile in Global Strategic Management and Global Supply Chain Management. The program strengthened my strategic thinking, analytical approach and understanding of international business models.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🌍 UTS Work Integrated Learning — Interkulturelle Zusammenarbeit & globale Arbeitspraktiken</strong>
-        <strong class="lang-en">🌍 UTS Work Integrated Learning — Intercultural Collaboration & Global Workplace Practices</strong>
-        <br />
-        <span class="lang-de inline">Im Rahmen des Work Integrated Learning to Work Certificate beschäftigte ich mich zusätzlich mit interkultureller Zusammenarbeit und globalen Arbeitspraktiken. Diese Erfahrung passt sehr gut zu einem Traineeprogramm mit internationalen Stationen und bereichsübergreifenden Projekten.</span>
-        <span class="lang-en inline">As part of the Work Integrated Learning to Work Certificate, I further developed my understanding of intercultural collaboration and global workplace practices. This fits very well with a trainee program involving international assignments and cross-functional projects.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇦🇺 Australien — Tokyo Headspa Sydney, Marketing Intern (Jan 2026 – May 2026)</strong>
-        <strong class="lang-en">🇦🇺 Australia — Tokyo Headspa Sydney, Marketing Intern (Jan 2026 – May 2026)</strong>
-        <br />
-        <span class="lang-de inline">Bei Tokyo Headspa unterstützte ich Social Media und EDM Campaign Management, Kampagnenoptimierung, Performance Analysis, Competitive Benchmarking, Influencer Research und AI-assisted Content Ideation. Dabei arbeitete ich unter anderem mit Mailchimp und Salesforce Marketing Cloud.</span>
-        <span class="lang-en inline">At Tokyo Headspa, I supported social media and EDM campaign management, campaign optimisation, performance analysis, competitive benchmarking, influencer research and AI-assisted content ideation. I also worked with tools such as Mailchimp and Salesforce Marketing Cloud.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">🇩🇪 Deutschland — Rückkehr & nächster Karriereschritt (Jun 2026)</strong>
-        <strong class="lang-en">🇩🇪 Germany — Return & Next Career Step (Jun 2026)</strong>
-        <br />
-        <span class="lang-de inline">Nach mehreren Jahren Studium und Arbeit in Australien kehre ich mit internationaler Erfahrung, Anpassungsfähigkeit und einer klaren Motivation für Marketing, Sales, Sales, Marketing, Consumer Insights und internationaler Leadership-Entwicklung nach Deutschland zurück.</span>
-        <span class="lang-en inline">After several years of studying and working in Australia, I am returning to Germany with international experience, adaptability and a clear motivation for marketing, sales, sales, marketing, consumer insights and international leadership development.</span>
-      </div>
-
-      <div>
-        <strong class="lang-de">⚙️ Nächster Schritt: Barilla?</strong>
-        <strong class="lang-en">⚙️ Next Step: Barilla?</strong>
-        <br />
-        <span class="lang-de inline">Das Barilla Future Leader Program verbindet für mich genau die Bereiche, in denen ich wachsen möchte: Trade Marketing, Consumer Marketing, Key Account Management, internationale Rotation und die Entwicklung zu einer zukünftigen Führungsrolle.</span>
-        <span class="lang-en inline">The Barilla Future Leader Program combines exactly the areas in which I want to grow: trade marketing, consumer marketing, key account management, international rotation and development into a future leadership role.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="technology-band">
-    <h3 class="lang-de">FMCG-Markenführung trifft Sales & Marketing</h3>
-    <h3 class="lang-en">FMCG Brand Leadership Meets Sales & Marketing</h3>
-    <p class="lang-de">An Barilla begeistert mich, dass starke Marken, Konsumentenverständnis und kommerzielle Umsetzung in einem internationalen FMCG-Umfeld zusammenkommen. Es geht nicht nur darum, Produkte zu vermarkten, sondern Nachfrage, Kanäle, Kundenbedürfnisse und Markenpositionierung sinnvoll miteinander zu verbinden.</p>
-    <p class="lang-en">What excites me about Barilla is that strong brands, consumer understanding and commercial execution come together in an international FMCG environment. It is not only about marketing products, but about connecting demand, channels, customer needs and brand positioning in a meaningful way.</p>
-    <p class="lang-de">Gerade Themen wie Trade Marketing, Consumer Marketing, Key Account Management, POS-Aktivierung und internationale Rotationen bieten die Möglichkeit, Sales & Marketing ganzheitlich und marktnah zu verstehen.</p>
-    <p class="lang-en">Topics such as trade marketing, consumer marketing, key account management, POS activation and international rotations offer the opportunity to understand sales & marketing in a holistic and market-oriented way.</p>
-  </section>
-
-  <section id="barilla">
-    <h3>Why Barilla?</h3>
-    <div class="accent-line"></div>
-
-    <div class="intro">
-      <p class="lang-de">Barilla steht für mich für starke Marken, internationale Präsenz, langfristiges Denken und eine besondere Verbindung aus Qualität, Tradition und moderner Markenführung.</p>
-      <p class="lang-en">To me, Barilla stands for strong brands, international presence, long-term thinking and a unique combination of quality, tradition and modern brand leadership.</p>
-
-      <p class="lang-de">Besonders spannend finde ich, dass das Future Leader Program einen ganzheitlichen Blick auf Trade Marketing, Consumer Marketing und Key Account Management ermöglicht. Die Frage, wie Marken im FMCG-Umfeld wachsen, wie Konsumenten erreicht werden und wie Handelspartner erfolgreich aktiviert werden, passt sehr gut zu meinen Interessen an Consumer Insights, Sales und Marketing Strategy.</p>
-      <p class="lang-en">I am especially interested in the program’s holistic perspective on trade marketing, consumer marketing and key account management. The question of how FMCG brands grow, how consumers are reached and how retail partners are successfully activated strongly aligns with my interests in consumer insights, sales and marketing strategy.</p>
-
-      <p class="lang-de">Auch die internationale Rotation und die Möglichkeit, in unterschiedlichen Märkten zu arbeiten, sprechen mich sehr an. Durch meine Zeit in Australien bringe ich die Offenheit und Anpassungsfähigkeit mit, die für internationale Einsätze und interkulturelle Zusammenarbeit wichtig sind.</p>
-      <p class="lang-en">The international rotation and the opportunity to work in different markets also strongly appeal to me. Through my time in Australia, I bring the openness and adaptability that are important for international assignments and intercultural collaboration.</p>
-    </div>
-  </section>
-
-  <section id="program">
-    <h3 class="lang-de">Warum dieses Programm zu mir passt</h3>
-    <h3 class="lang-en">Why This Program Fits Me</h3>
-    <div class="accent-line"></div>
-
-    <div class="program-grid">
-      <div class="program-box">
-        <div class="emoji">🧩</div>
-        <h4 class="lang-de">Trade Marketing</h4>
-        <h4 class="lang-en">Trade Marketing</h4>
-        <p class="lang-de">Die Mitarbeit an Listing, POS, Pricing, Promotions und Shelf Placement reizt mich sehr, weil hier Strategie, Kundensicht und kommerzielle Umsetzung direkt zusammenkommen.</p>
-        <p class="lang-en">Working on listing, POS, pricing, promotions and shelf placement strongly appeals to me because it connects strategy, customer perspective and commercial execution.</p>
-      </div>
-
-      <div class="program-box">
-        <div class="emoji">🎯</div>
-        <h4 class="lang-de">Consumer Marketing</h4>
-        <h4 class="lang-en">Consumer Marketing</h4>
-        <p class="lang-de">Marketingpläne, Brand Performance, Markttrends und Konsumentenverhalten passen sehr gut zu meinem Interesse an datenbasiertem, markenorientiertem Marketing.</p>
-        <p class="lang-en">Marketing plans, brand performance, market trends and consumer behaviour match my interest in data-based, brand-oriented marketing.</p>
-      </div>
-
-      <div class="program-box">
-        <div class="emoji">📈</div>
-        <h4 class="lang-de">Key Account Management</h4>
-        <h4 class="lang-en">Key Account Management</h4>
-        <p class="lang-de">Durch meine Erfahrungen in Kunden-, Markt- und Potenzialanalysen möchte ich lernen, wie kundenbezogene Marketingpläne, Distribution, Promotions und POS-Aktivitäten erfolgreich gesteuert werden.</p>
-        <p class="lang-en">Through my experience in customer, market and potential analysis, I want to learn how customer-related marketing plans, distribution, promotions and POS activities are managed successfully.</p>
-      </div>
-
-      <div class="program-box">
-        <div class="emoji">🌍</div>
-        <h4 class="lang-de">Internationale Rotation & Leadership</h4>
-        <h4 class="lang-en">International Rollouts & Change</h4>
-        <p class="lang-de">Die internationale Rotation und die Vorbereitung auf eine zukünftige Führungsrolle passen sehr gut zu meinem Wunsch, in einem globalen Umfeld zu lernen und Verantwortung zu übernehmen.</p>
-        <p class="lang-en">The international rotation and preparation for a future leadership role fit my ambition to learn and take responsibility in a global environment.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="requirements">
-    <h3 class="lang-de">Direkter Fit zu Barillas Anforderungen</h3>
-    <h3 class="lang-en">Direct Match With Barilla’s Requirements</h3>
-    <div class="accent-line"></div>
-
-    <p class="section-subtitle lang-de">Die Stelle sucht ein abgeschlossenes Masterstudium in Business Administration, Marketing oder einem vergleichbaren Bereich, erste praktische Erfahrung, idealerweise im FMCG-Umfeld, internationale Erfahrung, analytische und kommunikative Stärke sowie hohe Eigeninitiative und Lernbereitschaft.</p>
-    <p class="section-subtitle lang-en">The role asks for a completed Master’s degree in business administration, marketing or a comparable field, first practical experience, ideally in FMCG, international experience, analytical and communication skills as well as strong autonomy and eagerness to learn.</p>
-
-    <div class="cards">
-      <div class="card accent">
-        <div class="emoji">🎓</div>
-        <h4 class="lang-de">Masterstudium mit internationalem Fokus</h4>
-        <h4 class="lang-en">Master’s Degree With International Focus</h4>
-        <p class="lang-de">Ich habe meinen Master of Business Management an der University of Technology Sydney erfolgreich abgeschlossen, mit Schwerpunkten in Global Strategic Management und Global Supply Chain Management.</p>
-        <p class="lang-en">I have successfully completed my Master of Business Management at the University of Technology Sydney, with a focus on Global Strategic Management and Global Supply Chain Management.</p>
-      </div>
-
-      <div class="card accent">
-        <div class="emoji">📣</div>
-        <h4 class="lang-de">Sales- & Marketing-Erfahrung</h4>
-        <h4 class="lang-en">Sales & Marketing Experience</h4>
-        <p class="lang-de">Bei Tokyo Headspa unterstützte ich Social Media und EDM Campaign Management, Optimierung, Performance Analysis, Competitive Benchmarking und AI-assisted Content Ideation.</p>
-        <p class="lang-en">At Tokyo Headspa, I supported social media and EDM campaign management, optimisation, performance analysis, competitive benchmarking and AI-assisted content ideation.</p>
-      </div>
-
-      <div class="card accent">
-        <div class="emoji">🔍</div>
-        <h4 class="lang-de">Analyse, Reporting & Empfehlungen</h4>
-        <h4 class="lang-en">Analysis, Reporting & Recommendations</h4>
-        <p class="lang-de">Bei BRITA Australia arbeitete ich an Marktanalysen, Kundensegmentierung, Customer Behaviour Research, Commercial Viability Analysis und Management-Präsentationen.</p>
-        <p class="lang-en">At BRITA Australia, I worked on market analysis, customer segmentation, customer behaviour research, commercial viability analysis and management presentations.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="ideas">
-    <h3 class="lang-de">Drei Themen, die ich bei Barilla besonders spannend finde</h3>
-    <h3 class="lang-en">Three Topics I Find Especially Exciting at Barilla</h3>
-    <div class="accent-line"></div>
-
-    <div class="cards">
-      <div class="card accent">
-        <div class="emoji">⚙️</div>
-        <h4 class="lang-de">Strong Brands & Consumer Understanding</h4>
-        <h4 class="lang-en">Strong Brands & Consumer Understanding</h4>
-        <p class="lang-de">Starke Marken entstehen, wenn Konsumentenbedürfnisse, Markttrends und Markenpositionierung konsequent miteinander verbunden werden.</p>
-        <p class="lang-en">Strong brands are created when consumer needs, market trends and brand positioning are consistently connected.</p>
-      </div>
-
-      <div class="card accent">
-        <div class="emoji">💻</div>
-        <h4 class="lang-de">Consumer & Campaign Experience</h4>
-        <h4 class="lang-en">Consumer & Campaign Experience</h4>
-        <p class="lang-de">Trade Marketing verbindet Markenstrategie mit der Umsetzung im Handel – von Pricing und Promotions bis hin zu POS-Aktivierung und Shelf Placement.</p>
-        <p class="lang-en">Trade marketing connects brand strategy with retail execution – from pricing and promotions to POS activation and shelf placement.</p>
-      </div>
-
-      <div class="card accent">
-        <div class="emoji">🌍</div>
-        <h4 class="lang-de">International Rotation & Leadership</h4>
-        <h4 class="lang-en">International Rotation & Leadership</h4>
-        <p class="lang-de">Internationale Rotationen ermöglichen es, unterschiedliche Märkte, Kulturen und Kundenstrukturen zu verstehen und daraus langfristige Leadership-Kompetenz zu entwickeln.</p>
-        <p class="lang-en">International rotations make it possible to understand different markets, cultures and customer structures and to develop long-term leadership capabilities.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="highlight">
-    <h3 class="lang-de">Meine Motivation</h3>
-    <h3 class="lang-en">My Motivation</h3>
-    <div class="accent-line"></div>
-
-    <p class="lang-de">Ich bin über Kontinente hinweg gegangen, um mich weiterzuentwickeln, habe in internationalen Umfeldern studiert und gearbeitet und dabei eine starke Leidenschaft für Sales, Marketing, Consumer Insights, datengetriebene Entscheidungen und Markenwachstum entwickelt.</p>
-    <p class="lang-en">I moved across continents to challenge myself, studied and worked in international environments and developed a strong passion for sales, marketing, consumer insights, data-driven decisions and brand growth.</p>
-
-    <p class="lang-de">Jetzt suche ich ein Umfeld, in dem ich weiter lernen, Verantwortung übernehmen und an der Schnittstelle von Sales, Marketing, Consumer Goods und internationalem Geschäft wachsen kann.</p>
-    <p class="lang-en">Now I am looking for an environment where I can continue learning, take responsibility and grow at the intersection of sales, marketing, consumer goods and international business.</p>
-
-    <p class="lang-de">Für mich ist das Barilla Future Leader Program in Sales & Marketing genau diese Möglichkeit.</p>
-    <p class="lang-en">For me, Barilla’s Future Leader Program in Sales & Marketing is exactly that opportunity.</p>
-  </section>
-
-  <footer id="contact">
-    <p><strong>Jan Kraege</strong></p>
-    <p>Email: <a href="mailto:jan.kraege@icloud.com">jan.kraege@icloud.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jan-kraege" target="_blank">linkedin.com/in/jan-kraege</a></p>
-  </footer>
-
-  <script>
-    const toggleButton = document.getElementById("languageToggle");
-
-    function setLanguage(language) {
-      if (language === "en") {
-        document.body.classList.remove("show-de");
-        document.body.classList.add("show-en");
-        document.documentElement.lang = "en";
-        toggleButton.textContent = "Deutsch";
-      } else {
-        document.body.classList.remove("show-en");
-        document.body.classList.add("show-de");
-        document.documentElement.lang = "de";
-        toggleButton.textContent = "English";
-      }
-    }
-
-    toggleButton.addEventListener("click", function () {
-      const currentlyGerman = document.body.classList.contains("show-de");
-      setLanguage(currentlyGerman ? "en" : "de");
-    });
-
-    setLanguage("de");
-  </script>
-
-</body>
-</html>
+      <
